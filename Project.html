@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICST University - Your Future Starts Here</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* UI Optimization: Custom styles for Inter font, rounded corners, and consistent color palette */
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333; /* Darker text for readability */
+            background-color: #f8f9fa; /* Light background */
+        }
+        /* Consistent rounded corners for interactive elements and cards */
+        .rounded-corners { border-radius: 0.5rem !important; }
+        .btn { border-radius: 0.5rem !important; }
+        .card { border-radius: 0.75rem !important; }
+        /* Navbar typically not rounded at corners for full-width design */
+        .navbar { border-radius: 0 !important; }
+        /* Subtle shadow for cards and navbar for depth without clutter */
+        .shadow-sm { box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important; }
+
+        /* Hero section: uses a specific image URL for better UI */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://icst.edu.lk/wp-content/uploads/2023/12/07-scaled-690x310.jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 100px 0; /* Ample padding for visual space */
+        }
+        .hero-section h1 {
+            font-size: 3.5rem; /* Prominent heading */
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        /* Top bar: subtle background and consistent link styling */
+        .top-bar {
+            background-color: #e9ecef; /* Light gray background */
+            font-size: 0.875rem; /* Smaller font size for utility */
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #dee2e6; /* Light separator */
+        }
+        .top-bar .social-icons a,
+        .top-bar .contact-info a,
+        .top-bar .utility-links a {
+            color: #495057; /* Darker gray for links */
+            text-decoration: none;
+            transition: color 0.3s ease; /* Smooth hover effect */
+        }
+        .top-bar .social-icons a:hover,
+        .top-bar .contact-info a:hover,
+        .top-bar .utility-links a:hover {
+            color: #0d6efd; /* Bootstrap primary color on hover */
+        }
+
+        /* General link styling: consistent hover behavior */
+        a { color: inherit; text-decoration: none; }
+        a:hover { color: #0d6efd; text-decoration: underline; }
+
+        /* Section titles: prominent and consistent styling */
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #0d6efd; /* Primary color for main titles */
+        }
+
+        /* Stats section: numbers in primary color for emphasis */
+        .stats-section .display-5 { color: #0d6efd; }
+
+        /* Footer: dark background with light text for contrast */
+        .footer { background-color: #212529; color: #f8f9fa; }
+        .footer a { color: #ced4da; text-decoration: none; }
+        .footer a:hover { color: #0d6efd; }
+        .footer .social-icons a {
+            color: #f8f9fa;
+            margin-right: 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        .footer .social-icons a:hover { color: #0d6efd; }
+        .footer h5 { color: #fff; margin-bottom: 20px; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Skip to content link for accessibility -->
+    <a class="visually-hidden-focusable" href="#main-content">Skip to content</a>
+
+    <!-- Top Bar: Utility links and social media -->
+    <div class="top-bar d-none d-md-block border-bottom">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="contact-info">
+                For more inquiries:
+                <a href="tel:+1234567890" class="me-2">+1 234 567 890</a> |
+                <a href="tel:+1987654321" class="me-2">+1 987 654 321</a> |
+                <a href="mailto:info@icst.edu">info@icst.edu</a>
+            </div>
+            <div class="utility-links">
+                <a href="#" class="me-3">Parents & Families</a>
+                <a href="#" class="me-3">Current Students</a>
+                <a href="#">Research & Innovation</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar: Primary site navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">ICST University</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#">Admissions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Academics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Campus Life</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Research</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown"><li><a class="dropdown-item" href="#">Our Mission</a></li></ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Programs</a>
+                        <ul class="dropdown-menu" aria-labelledby="programsDropdown"><li><a class="dropdown-item" href="#">Undergraduate</a></li></ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="applyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Apply Now</a>
+                        <ul class="dropdown-menu" aria-labelledby="applyDropdown"><li><a class="dropdown-item" href="#">Application Process</a></li></ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="studentServicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Student Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="studentServicesDropdown"><li><a class="dropdown-item" href="#">Support</a></li></ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="alumniDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Alumni</a>
+                        <ul class="dropdown-menu" aria-labelledby="alumniDropdown"><li><a class="dropdown-item" href="#">Connect</a></li></ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">News & Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Financial Aid</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Hero Section: Main call to action -->
+        <section class="hero-section py-5 text-center">
+            <div class="container py-5">
+                <h1 class="display-4 fw-bold mb-3">Your Future Starts Here at ICST</h1>
+                <p class="lead mb-4">Innovate, Create, Succeed with a world-class education.</p>
+                <a href="#" class="btn btn-primary btn-lg rounded-corners shadow-sm">Apply Today!</a>
+            </div>
+        </section>
+
+        <!-- Study Programs Section: Overview of academic offerings -->
+        <section class="py-5 bg-white">
+            <div class="container">
+                <h2 class="section-title">Our Programs</h2>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm rounded-corners">
+                            <div class="card-body"><h5 class="card-title text-primary">Undergraduate Degrees</h5><p class="card-text">Explore diverse bachelor's programs.</p><a href="#" class="btn btn-outline-primary btn-sm rounded-corners">View Programs</a></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm rounded-corners">
+                            <div class="card-body"><h5 class="card-title text-primary">Graduate Studies</h5><p class="card-text">Advance your career with master's/Ph.D.</p><a href="#" class="btn btn-outline-primary btn-sm rounded-corners">Discover More</a></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm rounded-corners">
+                            <div class="card-body"><h5 class="card-title text-primary">Professional Certificates</h5><p class="card-text">Enhance skills with specialized courses.</p><a href="#" class="btn btn-outline-primary btn-sm rounded-corners">Explore Options</a></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm rounded-corners">
+                            <div class="card-body"><h5 class="card-title text-primary">Online Learning</h5><p class="card-text">Flexible education from anywhere.</p><a href="#" class="btn btn-outline-primary btn-sm rounded-corners">Learn More</a></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm rounded-corners">
+                            <div class="card-body"><h5 class="card-title text-primary">International Exchange</h5><p class="card-text">Global opportunities for students.</p><a href="#" class="btn btn-outline-primary btn-sm rounded-corners">Explore Exchange</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Section: Highlights research areas -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title">Cutting-Edge Research</h2>
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent border-0"><i class="fas fa-flask me-2 text-primary"></i> AI & Machine Learning Lab</li>
+                            <li class="list-group-item bg-transparent border-0"><i class="fas fa-microscope me-2 text-primary"></i> Sustainable Technologies Center</li>
+                            <li class="list-group-item bg-transparent border-0"><i class="fas fa-globe me-2 text-primary"></i> Global Health Initiatives</li>
+                            <li class="list-group-item bg-transparent border-0"><i class="fas fa-lightbulb me-2 text-primary"></i> Robotics & Automation Institute</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="https://icst.edu.lk/wp-content/uploads/2023/12/06-scaled-480x320.jpg" alt="Research" class="img-fluid rounded-corners shadow-sm">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Campus Locations Section: Information on physical campuses -->
+        <section class="py-5 bg-white">
+            <div class="container">
+                <h2 class="section-title">Our Vibrant Campuses</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="p-4 border rounded-corners shadow-sm h-100">
+                            <h3 class="text-primary mb-3">Main Campus - Cityville</h3>
+                            <p>Experience a bustling urban campus with modern facilities and industry connections.</p>
+                            <a href="#" class="btn btn-outline-primary mt-3 rounded-corners">Explore Cityville Campus</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-4 border rounded-corners shadow-sm h-100">
+                            <h3 class="text-primary mb-3">Innovation Hub - Tech Park</h3>
+                            <p>Our dedicated hub for innovation, research, and startup incubation.</p>
+                            <a href="#" class="btn btn-outline-primary mt-3 rounded-corners">Visit Tech Park Hub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5"><a href="#" class="btn btn-dark btn-lg rounded-corners shadow-sm">Take a Virtual Tour</a></div>
+            </div>
+        </section>
+
+        <!-- Stats Section: Key university metrics -->
+        <section class="py-5 bg-light stats-section">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-3"><h3 class="display-5 fw-bold">95%</h3><p class="lead">Career Placement</p></div>
+                    <div class="col-md-3"><h3 class="display-5 fw-bold">5000+</h3><p class="lead">Enrolled Students</p></div>
+                    <div class="col-md-3"><h3 class="display-5 fw-bold">30+</h3><p class="lead">Academic Programs</p></div>
+                    <div class="col-md-3"><h3 class="display-5 fw-bold">300+</h3><p class="lead">Dedicated Faculty</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Departments Section: List of departments/schools -->
+        <section class="py-5 bg-white">
+            <div class="container">
+                <h2 class="section-title">Academic Departments</h2>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
+                    <div class="col"><a href="#" class="btn btn-light w-100 text-start border shadow-sm py-3 rounded-corners">School of Engineering</a></div>
+                    <div class="col"><a href="#" class="btn btn-light w-100 text-start border shadow-sm py-3 rounded-corners">Faculty of Computer Science</a></div>
+                    <div class="col"><a href="#" class="btn btn-light w-100 text-start border shadow-sm py-3 rounded-corners">Department of Business Admin.</a></div>
+                    <div class="col"><a href="#" class="btn btn-light w-100 text-start border shadow-sm py-3 rounded-corners">School of Arts & Sciences</a></div>
+                    <div class="col"><a href="#" class="btn btn-light w-100 text-start border shadow-sm py-3 rounded-corners">Graduate School</a></div>
+                    <div class="col"><a href="#" class="btn btn-light w-100 text-start border shadow-sm py-3 rounded-corners">Department of Health Sciences</a></div>
+                    <div class="col"><a href="#" class="btn btn-light w-100 text-start border shadow-sm py-3 rounded-corners">Institute of Design</a></div>
+                    <div class="col"><a href="#" class="btn btn-light w-100 text-start border shadow-sm py-3 rounded-corners">Continuing Education</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Student Success Stories Section: Testimonials -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title">Student Success Stories</h2>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100 shadow-sm rounded-corners">
+                            <div class="card-body"><p class="card-text">“ICST provided me with the tools and mentorship to launch my tech startup. The practical approach to learning is unmatched!”</p></div>
+                            <div class="card-footer bg-white border-0 pt-0"><h6 class="mb-0">Alex Chen</h6><p class="text-muted small">Computer Science, Class of 2024</p><a href="#" class="btn btn-link p-0 text-decoration-none">Read Full Story <i class="fas fa-arrow-right fa-xs ms-1"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm rounded-corners">
+                            <div class="card-body"><p class="card-text">“The research opportunities at ICST allowed me to contribute to groundbreaking projects in sustainable energy. Truly inspiring!”</p></div>
+                            <div class="card-footer bg-white border-0 pt-0"><h6 class="mb-0">Maria Rodriguez</h6><p class="text-muted small">Environmental Engineering, Class of 2023</p><a href="#" class="btn btn-link p-0 text-decoration-none">Read Full Story <i class="fas fa-arrow-right fa-xs ms-1"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm rounded-corners">
+                            <div class="card-body"><p class="card-text">“From campus clubs to academic support, ICST fosters a vibrant community where every student can thrive.”</p></div>
+                            <div class="card-footer bg-white border-0 pt-0"><h6 class="mb-0">Samir Khan</h6><p class="text-muted small">Business Administration, Class of 2025</p><a href="#" class="btn btn-link p-0 text-decoration-none">Read Full Story <i class="fas fa-arrow-right fa-xs ms-1"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5"><a href="#" class="btn btn-primary btn-lg rounded-corners shadow-sm">Explore More Stories</a></div>
+            </div>
+        </section>
+
+        <!-- Journey to ICST: Call to action for prospective students -->
+        <section class="py-5 bg-light">
+            <div class="container text-center">
+                <h2 class="section-title">Your Journey to ICST</h2>
+                <p class="lead mb-4">Discover the steps to join our innovative community.</p>
+                <a href="#" class="btn btn-dark btn-lg rounded-corners shadow-sm">Start Your Application</a>
+            </div>
+        </section>
+
+        <!-- Campus Life & Admissions Callouts: Quick links to key areas -->
+        <section class="py-5 bg-white">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="p-4 border rounded-corners shadow-sm h-100 text-center">
+                            <h4 class="text-primary mb-3">Vibrant Campus Life</h4>
+                            <p>Experience a dynamic student environment with diverse clubs and activities.</p>
+                            <a href="#" class="btn btn-outline-primary mt-3 rounded-corners">Discover Campus Life</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-4 border rounded-corners shadow-sm h-100 text-center">
+                            <h4 class="text-primary mb-3">Admissions Requirements</h4>
+                            <p>Find detailed information on what you need to apply.</p>
+                            <a href="#" class="btn btn-outline-primary mt-3 rounded-corners">View Requirements</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-4 border rounded-corners shadow-sm h-100 text-center">
+                            <h4 class="text-primary mb-3">Upcoming Events</h4>
+                            <p>Join our info sessions and open days to learn more.</p>
+                            <a href="#" class="btn btn-outline-primary mt-3 rounded-corners">Check Event Calendar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News & Updates Section: Latest news and blog link -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title">Latest News & Updates</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm rounded-corners">
+                            <div class="card-body"><h5 class="card-title">ICST Hosts Annual Innovation Summit</h5><p class="card-text text-muted small">25 June 2025 | News</p><p class="card-text">Leaders from tech industries gathered at ICST for a summit on future innovations...</p><a href="#" class="btn btn-link p-0 text-decoration-none">Read Article <i class="fas fa-arrow-right fa-xs ms-1"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm rounded-corners">
+                            <div class="card-body"><h5 class="card-title">New Research Grant Awarded to ICST Faculty</h5><p class="card-text text-muted small">20 June 2025 | Research</p><p class="card-text">Prof. Jane Doe secures major funding for her groundbreaking AI research...</p><a href="#" class="btn btn-link p-0 text-decoration-none">Learn More <i class="fas fa-arrow-right fa-xs ms-1"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm rounded-corners">
+                            <div class="card-body"><h5 class="card-title">Student Project Wins National Robotics Competition</h5><p class="card-text text-muted small">15 June 2025 | Student Life</p><p class="card-text">Our robotics team showcased exceptional talent, bringing home the national title...</p><a href="#" class="btn btn-link p-0 text-decoration-none">View Project <i class="fas fa-arrow-right fa-xs ms-1"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5"><a href="#" class="btn btn-dark btn-lg rounded-corners shadow-sm">Visit Our Newsroom</a><p class="mt-2 text-muted">Stay informed with the latest from ICST University</p><a href="#" class="btn btn-outline-dark btn-sm mt-2 rounded-corners">ICST Blog</a></div>
+            </div>
+        </section>
+
+        <!-- Video Gallery: Embedded video for visual engagement -->
+        <section class="py-5 bg-light">
+            <div class="container text-center">
+                <h2 class="section-title">Video Gallery</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="ratio ratio-16x9 shadow-sm rounded-corners">
+                            <!-- Updated YouTube embed URL for better compatibility -->
+                            <iframe src="https://www.youtube.com/embed/yr6GydEtHG0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-4 rounded-corners shadow-sm">Explore Videos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer: Site map, contact, and social links -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5>ICST UNIVERSITY</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">School of Engineering</a></li>
+                        <li><a href="#">Faculty of Computer Science</a></li>
+                        <li><a href="#">Department of Business Admin.</a></li>
+                        <li><a href="#">School of Arts & Sciences</a></li>
+                        <li><a href="#">Graduate School</a></li>
+                        <li><a href="#">Department of Health Sciences</a></li>
+                        <li><a href="#">Institute of Design</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Admissions</a></li>
+                        <li><a href="#">Academics</a></li>
+                        <li><a href="#">Campus Life</a></li>
+                        <li><a href="#">Research</a></li>
+                        <li><a href="#">Alumni</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-phone-alt me-2"></i><a href="tel:+1234567890">+1 234 567 890</a></p>
+                    <p><i class="fas fa-phone-alt me-2"></i><a href="tel:+1987654321">+1 987 654 321</a></p>
+                    <p><i class="fas fa-envelope me-2"></i><a href="mailto:info@icst.edu">info@icst.edu</a></p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="mb-0">&copy; 2025 ICST University. All rights reserved. | <a href="#">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (Popper and Bootstrap JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
